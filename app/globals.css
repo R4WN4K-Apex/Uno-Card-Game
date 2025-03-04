@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  --heading: 1.625rem;
+  --subheading: 1.25rem;
+  --text1: 1.125rem;
+  --text2: 1rem;
+  --caption1: 0.875rem;
+  --caption2: 0.75rem;
+
+  --primary: #4d40e3;
+  --secondary: #41ae87;
+  --uno-red: #ff5555;
+  --uno-green: #55aa55;
+  --uno-blue: #5555ff;
+  --uno-yellow: #ffaa00;
+  --white: #ffffff;
+  --black: #202527;
+  --inactive: #8b9ea9;
+  --input-bg: #ebedf5;
+  --gold: #f2a737;
+  --warning: #fd4c4c;
+  --background: #ebedf5;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+.btn-primary {
+  @apply font-bold bg-(--primary) w-[12.5rem] h-[3.125rem] text-white rounded-full;
+}
+
+.btn-primary-xs {
+  @apply w-24 h-8 bg-(--primary) rounded-full text-xs text-white font-bold;
+}
+
+.btn-secondary {
+  @apply bg-(--inactive) w-[12.5rem] h-[3.125rem] text-white rounded-full;
+}
+
+.btn-secondary-xs {
+  @apply w-24 h-8 bg-(--inactive) rounded-full text-xs text-white font-bold;
+}
