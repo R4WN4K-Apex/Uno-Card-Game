@@ -17,14 +17,14 @@ export const UnoCardColors: Record<UnoCardProps["color"], string> = {
 };
 
 export const UnoCardHeight: Record<UnoCardProps["size"], string> = {
-  sm: "127",
+  sm: "100",
   md: "191",
   lg: "318",
   "100%": "100%",
 };
 
 export const UnoCardWidth: Record<UnoCardProps["size"], string> = {
-  sm: "85",
+  sm: "66.67",
   md: "128",
   lg: "212",
   "100%": "100%",

@@ -1,5 +1,4 @@
 import CardStack from "@/components/CardStack";
-import CardTable from "@/components/CardTable";
 import {
   UnoCard0,
   UnoCard2,
@@ -43,8 +42,10 @@ const gamePage = () => {
             </div>
           </div>
           <div className="Player h-[80vh] w-[33vh] rounded-xl bg-(--background) flex flex-col justify-between">
-            <PlayerCards />
-            <CardStack />
+            <div className="overflow-y-auto m-4">
+              <PlayerCards />
+            </div>
+            <CardStack className="flex items-center justify-center h-80 mx-4 mb-4" />
           </div>
         </div>
       </div>
