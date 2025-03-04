@@ -2,10 +2,16 @@ import {
   UnoCardColors,
   UnoCardHeight,
   UnoCardProps,
+  UnoCardSpecialBFSymbol,
+  UnoCardSpecialBSSymbol,
+  UnoCardSpecialMFSymbol,
+  UnoCardSpecialMSSymbol,
+  UnoCardSpecialTFSymbol,
+  UnoCardSpecialTSSymbol,
   UnoCardWidth,
 } from "@/types/CardTypes";
 
-const UnoCardReverse: React.FC<UnoCardProps> = ({ color, size }) => {
+const UnoCardReverse: React.FC<UnoCardProps> = ({ color, size, value }) => {
   return (
     <svg
       width={UnoCardWidth[size]}
@@ -30,30 +36,12 @@ const UnoCardReverse: React.FC<UnoCardProps> = ({ color, size }) => {
         d="M181 81C92.6344 81 21 152.634 21 241C21 263.091 38.9086 281 61 281C149.366 281 221 209.366 221 121C221 98.9086 203.091 81 181 81Z"
         fill="white"
       />
-      <path
-        d="M121 116L131 126L91 166C81 176 81 196 91 206L111 186L151 146L161 156V116H121Z"
-        fill={UnoCardColors[color]}
-      />
-      <path
-        d="M121 246L111 236L151 196C161 186 161 166 151 156L131 176L91 216L81 206V246H121Z"
-        fill={UnoCardColors[color]}
-      />
-      <path
-        d="M51 30.9999L56 35.9999L36 55.9999C31 60.9999 31 70.9999 36 75.9999L46 65.9999L66 45.9999L71 50.9999V30.9999H51Z"
-        fill="white"
-      />
-      <path
-        d="M51 95.9999L46 90.9999L66 70.9999C71 65.9999 71 55.9999 66 50.9999L56 60.9999L36 80.9999L31 75.9999V95.9999H51Z"
-        fill="white"
-      />
-      <path
-        d="M191 266L196 271L176 291C171 296 171 306 176 311L186 301L206 281L211 286V266H191Z"
-        fill="white"
-      />
-      <path
-        d="M191 331L186 326L206 306C211 301 211 291 206 286L196 296L176 316L171 311V331H191Z"
-        fill="white"
-      />
+      <path d={UnoCardSpecialMFSymbol[value]} fill={UnoCardColors[color]} />
+      <path d={UnoCardSpecialMSSymbol[value]} fill={UnoCardColors[color]} />
+      <path d={UnoCardSpecialTFSymbol[value]} fill="white" />
+      <path d={UnoCardSpecialTSSymbol[value]} fill="white" />
+      <path d={UnoCardSpecialBFSymbol[value]} fill="white" />
+      <path d={UnoCardSpecialBSSymbol[value]} fill="white" />
     </svg>
   );
 };

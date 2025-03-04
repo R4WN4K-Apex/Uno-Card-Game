@@ -1,11 +1,14 @@
 import {
+  UnoCardBottomRightSymbol,
   UnoCardColors,
   UnoCardHeight,
+  UnoCardMainSymbol,
   UnoCardProps,
+  UnoCardTopLeftSymbol,
   UnoCardWidth,
 } from "@/types/CardTypes";
 
-const UnoCard5: React.FC<UnoCardProps> = ({ color, size }) => {
+const UnoCard5: React.FC<UnoCardProps> = ({ color, size, value }) => {
   return (
     <svg
       width={UnoCardWidth[size]}
@@ -30,18 +33,9 @@ const UnoCard5: React.FC<UnoCardProps> = ({ color, size }) => {
         d="M181 81C92.6344 81 21 152.634 21 241C21 263.091 38.9086 281 61 281C149.366 281 221 209.366 221 121C221 98.9086 203.091 81 181 81Z"
         fill="white"
       />
-      <path
-        d="M85 121V161V181H125C136.08 181 145 189.92 145 201C145 212.08 136.08 221 125 221C113.92 221 105 212.08 105 201H85C85 223.16 102.84 241 125 241C147.16 241 165 223.16 165 201C165 178.84 147.16 161 125 161H105V141H125H161V121H125H105H85Z"
-        fill={UnoCardColors[color]}
-      />
-      <path
-        d="M31 31V51V61H51C56.54 61 61 65.46 61 71C61 76.54 56.54 81 51 81C45.46 81 41 76.54 41 71H31C31 82.08 39.92 91 51 91C62.08 91 71 82.08 71 71C71 59.92 62.08 51 51 51H41V41H51H69V31H51H41H31Z"
-        fill="white"
-      />
-      <path
-        d="M211 331V311V301H191C185.46 301 181 296.54 181 291C181 285.46 185.46 281 191 281C196.54 281 201 285.46 201 291H211C211 279.92 202.08 271 191 271C179.92 271 171 279.92 171 291C171 302.08 179.92 311 191 311H201V321H191H173V331H191H201H211Z"
-        fill="white"
-      />
+      <path d={UnoCardMainSymbol[value]} fill={UnoCardColors[color]} />
+      <path d={UnoCardTopLeftSymbol[value]} fill="white" />
+      <path d={UnoCardBottomRightSymbol[value]} fill="white" />
     </svg>
   );
 };

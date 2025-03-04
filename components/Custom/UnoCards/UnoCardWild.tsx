@@ -1,10 +1,14 @@
-import { UnoCardHeight, UnoCardProps, UnoCardWidth } from "@/types/CardTypes";
+import {
+  UnoWildCardHeight,
+  UnoWildCardProps,
+  UnoWildCardWidth,
+} from "@/types/CardTypes";
 
-const UnoCardWild: React.FC<UnoCardProps> = ({ size, color }) => {
+const UnoCardWild: React.FC<UnoWildCardProps> = ({ size }) => {
   return (
     <svg
-      width={UnoCardWidth[size]}
-      height={UnoCardHeight[size]}
+      width={UnoWildCardWidth[size]}
+      height={UnoWildCardHeight[size]}
       viewBox="0 0 242 362"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

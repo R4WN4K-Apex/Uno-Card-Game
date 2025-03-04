@@ -4,11 +4,19 @@ import {
   UnoCardHeight,
   UnoCardMainSymbol,
   UnoCardProps,
+  UnoCardSpecial2wStroke,
+  UnoCardSpecial2wStrokeWidth,
+  UnoCardSpecialBFSymbol,
+  UnoCardSpecialBSSymbol,
+  UnoCardSpecialMFSymbol,
+  UnoCardSpecialMSSymbol,
+  UnoCardSpecialTFSymbol,
+  UnoCardSpecialTSSymbol,
   UnoCardTopLeftSymbol,
   UnoCardWidth,
 } from "@/types/CardTypes";
 
-const UnoCard6: React.FC<UnoCardProps> = ({ color, size, value }) => {
+const Card: React.FC<UnoCardProps> = ({ color, size, value }) => {
   return (
     <svg
       width={UnoCardWidth[size]}
@@ -33,6 +41,12 @@ const UnoCard6: React.FC<UnoCardProps> = ({ color, size, value }) => {
         d="M181 81C92.6344 81 21 152.634 21 241C21 263.091 38.9086 281 61 281C149.366 281 221 209.366 221 121C221 98.9086 203.091 81 181 81Z"
         fill="white"
       />
+      {/* <path
+        d={UnoCardTopLeftSymbol[value]}
+        fill="white"
+        stroke="black" +2
+        strokeWidth="2.03962"
+      /> */}
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -40,18 +54,34 @@ const UnoCard6: React.FC<UnoCardProps> = ({ color, size, value }) => {
         fill={UnoCardColors[color]}
       />
       <path
-        fillRule="evenodd"
-        clipRule="evenodd"
         d={UnoCardTopLeftSymbol[value]}
         fill="white"
+        stroke={UnoCardSpecial2wStroke[value]}
+        strokeWidth={UnoCardSpecial2wStrokeWidth[value]}
       />
+      <path d={UnoCardSpecialMSSymbol[value]} fill={UnoCardColors[color]} />
+      <path
+        d={UnoCardBottomRightSymbol[value]}
+        fill="white"
+        stroke={UnoCardSpecial2wStroke[value]}
+        strokeWidth={UnoCardSpecial2wStrokeWidth[value]}
+      />
+      <path d={UnoCardSpecialMFSymbol[value]} fill={UnoCardColors[color]} />
       <path
         fillRule="evenodd"
         clipRule="evenodd"
-        d={UnoCardBottomRightSymbol[value]}
+        d={UnoCardSpecialTFSymbol[value]}
         fill="white"
       />
+      <path d={UnoCardSpecialTSSymbol[value]} fill="white" />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d={UnoCardSpecialBSSymbol[value]}
+        fill="white"
+      />
+      <path d={UnoCardSpecialBFSymbol[value]} fill="white" />
     </svg>
   );
 };
-export default UnoCard6;
+export default Card;

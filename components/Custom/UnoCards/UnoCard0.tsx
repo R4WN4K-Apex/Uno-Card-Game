@@ -3,9 +3,12 @@ import {
   UnoCardColors,
   UnoCardHeight,
   UnoCardWidth,
+  UnoCardMainSymbol,
+  UnoCardTopLeftSymbol,
+  UnoCardBottomRightSymbol,
 } from "@/types/CardTypes";
 
-const UnoCard0: React.FC<UnoCardProps> = ({ color, size }) => {
+const UnoCard0: React.FC<UnoCardProps> = ({ color, size, value }) => {
   return (
     <svg
       width={UnoCardWidth[size]}
@@ -33,19 +36,19 @@ const UnoCard0: React.FC<UnoCardProps> = ({ color, size }) => {
       <path
         fillRule="evenodd"
         clipRule="evenodd"
-        d="M121 121C98.9086 121 81 138.909 81 161V201C81 223.092 98.9086 241 121 241C143.091 241 161 223.092 161 201V161C161 138.909 143.091 121 121 121ZM121 141C132.046 141 141 149.954 141 161V201C141 212.046 132.046 221 121 221C109.954 221 101 212.046 101 201V161C101 149.954 109.954 141 121 141Z"
+        d={UnoCardMainSymbol[value]}
         fill={UnoCardColors[color]}
       />
       <path
         fillRule="evenodd"
         clipRule="evenodd"
-        d="M51 31.0001C39.9543 31.0001 31 39.9544 31 51.0001V71.0001C31 82.0458 39.9543 91.0001 51 91.0001C62.0457 91.0001 71 82.0458 71 71.0001V51.0001C71 39.9544 62.0457 31.0001 51 31.0001ZM51 41.0001C56.5228 41.0001 61 45.4773 61 51.0001V71.0001C61 76.523 56.5228 81.0001 51 81.0001C45.4772 81.0001 41 76.523 41 71.0001V51.0001C41 45.4773 45.4772 41.0001 51 41.0001Z"
+        d={UnoCardTopLeftSymbol[value]}
         fill="white"
       />
       <path
         fillRule="evenodd"
         clipRule="evenodd"
-        d="M191 271C179.954 271 171 279.954 171 291V311C171 322.046 179.954 331 191 331C202.046 331 211 322.046 211 311V291C211 279.954 202.046 271 191 271ZM191 281C196.523 281 201 285.477 201 291V311C201 316.523 196.523 321 191 321C185.477 321 181 316.523 181 311V291C181 285.477 185.477 281 191 281Z"
+        d={UnoCardBottomRightSymbol[value]}
         fill="white"
       />
     </svg>
