@@ -280,7 +280,10 @@ export const UnoCardSpecial2wStrokeWidth: Record<
 };
 
 //Uno Wild Cards
-export type UnoWildCardProps = { size: "sm" | "md" | "lg" | "100%" };
+export type UnoWildCardProps = {
+  size: "sm" | "md" | "lg" | "100%";
+  value: "wild" | "+4";
+};
 
 export const UnoWildCardHeight: Record<UnoWildCardProps["size"], string> = {
   sm: "3rem",
@@ -294,6 +297,149 @@ export const UnoWildCardWidth: Record<UnoWildCardProps["size"], string> = {
   md: "4rem",
   lg: "8rem",
   "100%": "100%",
+};
+
+export const UnoWildCardRed: Record<UnoWildCardProps["value"], string> = {
+  "+4": "M111 141H91C85.4772 141 79.8449 145.043 78.4201 150.03L63.5799 201.97C62.155 206.957 65.4771 211 70.9999 211H90.9999C96.5228 211 102.155 206.957 103.58 201.97L118.42 150.03C119.845 145.043 116.523 141 111 141Z",
+
+  wild: "M181 81C113.871 81 56.4976 122.389 32.75 181H121L181 81Z",
+};
+
+export const UnoWildCardBlue: Record<UnoWildCardProps["value"], string> = {
+  "+4": "M151 111H131C125.477 111 119.845 115.043 118.42 120.03L103.58 171.97C102.155 176.957 105.477 181 111 181H131C136.523 181 142.155 176.957 143.58 171.97L158.42 120.03C159.845 115.043 156.523 111 151 111Z",
+
+  wild: "M181 81L121 181H209.25C216.763 162.458 221 142.237 221 121C221 98.9086 203.091 81 181 81Z",
+};
+
+export const UnoWildCardGreen: Record<UnoWildCardProps["value"], string> = {
+  "+4": "M181 141H161C155.477 141 149.845 145.043 148.42 150.03L133.58 201.97C132.155 206.957 135.477 211 141 211H161C166.523 211 172.155 206.957 173.58 201.97L188.42 150.03C189.845 145.043 186.523 141 181 141Z",
+
+  wild: "M121 181L61 281C128.129 281 185.502 239.611 209.25 181H121Z",
+};
+
+export const UnoWildCardYellow: Record<UnoWildCardProps["value"], string> = {
+  "+4": "M141 171H121C115.477 171 109.845 175.043 108.42 180.03L93.5799 231.97C92.155 236.957 95.4771 241 101 241H121C126.523 241 132.155 236.957 133.58 231.97L148.42 180.03C149.845 175.043 146.523 171 141 171Z",
+
+  wild: "M32.75 181C25.2373 199.542 21 219.763 21 241C21 263.091 38.9086 281 61 281L121 181H32.75Z",
+};
+
+export const UnoWildCardStroke: Record<UnoWildCardProps["value"], string> = {
+  "+4": "black",
+  wild: "",
+};
+
+export const UnoWildCardStrokeWidth: Record<UnoWildCardProps["value"], string> =
+  {
+    "+4": "2",
+    wild: "",
+  };
+
+export const UnoWildCardWildStroke: Record<UnoWildCardProps["value"], string> =
+  {
+    "+4": "",
+    wild: "white",
+  };
+
+export const UnoWildCardWildStrokeWidth: Record<
+  UnoWildCardProps["value"],
+  string
+> = {
+  "+4": "",
+  wild: "4",
+};
+
+export const UnoWildCardMiddleStorke: Record<
+  UnoWildCardProps["value"],
+  string
+> = {
+  "+4": "",
+  wild: "M181 80.9999C113.871 80.9999 56.4976 122.389 32.75 181C25.2373 199.542 21 219.763 21 241C21 263.091 38.9086 281 61 281C128.129 281 185.502 239.611 209.25 181C216.763 162.458 221 142.237 221 121C221 98.9085 203.091 80.9999 181 80.9999Z",
+};
+
+export const UnoWildCardTopLeftStorke: Record<
+  UnoWildCardProps["value"],
+  string
+> = {
+  "+4": "",
+  wild: "M71 30.9999C54.2178 30.9999 39.8744 41.3472 33.9375 55.9999C32.0593 60.6353 31 65.6907 31 70.9999C31 76.5227 35.4772 80.9999 41 80.9999C57.7822 80.9999 72.1256 70.6526 78.0625 55.9999C79.9407 51.3644 81 46.309 81 40.9999C81 35.477 76.5228 30.9999 71 30.9999Z",
+};
+
+export const UnoWildCardBottomRightStorke: Record<
+  UnoWildCardProps["value"],
+  string
+> = {
+  "+4": "",
+  wild: "M201 281C184.218 281 169.874 291.347 163.938 306C162.059 310.635 161 315.691 161 321C161 326.523 165.477 331 171 331C187.782 331 202.126 320.653 208.062 306C209.941 301.364 211 296.309 211 291C211 285.477 206.523 281 201 281Z",
+};
+
+export const UnoWildCardWhite: Record<UnoWildCardProps["value"], string> = {
+  "+4": "White",
+  wild: "",
+};
+
+export const UnoWildCardTFSymbol: Record<UnoWildCardProps["value"], string> = {
+  "+4": "M35 51V61H25V70.9998H35V81H45V70.9998H55V61H45V51H35Z",
+  wild: "",
+};
+
+export const UnoWildCardTSSymbol: Record<UnoWildCardProps["value"], string> = {
+  "+4": "M80.6001 31L61 71V81H85V91H95V81H101V71H95V51H85V71H71.3999L91 31H80.6001Z",
+  wild: "",
+};
+
+export const UnoWildCardBFSymbol: Record<UnoWildCardProps["value"], string> = {
+  "+4": "M161.4 331L181 291V281H157V271H147V281H141V291H147V311H157V291H170.6L151 331H161.4Z",
+  wild: "",
+};
+
+export const UnoWildCardBSSymbol: Record<UnoWildCardProps["value"], string> = {
+  "+4": "M207 311V301H217V291H207V281H197V291H187V301H197V311H207Z",
+  wild: "",
+};
+
+export const UnoWildCardTopRed: Record<UnoWildCardProps["value"], string> = {
+  "+4": "",
+  wild: "M71 31C54.2178 31 39.8744 41.3473 33.9375 56H56L71 31Z",
+};
+
+export const UnoWildCardTopBlue: Record<UnoWildCardProps["value"], string> = {
+  "+4": "",
+  wild: "M71 31L56 56H78.0625C79.9407 51.3645 81 46.3092 81 41C81 35.4771 76.5228 31 71 31Z",
+};
+
+export const UnoWildCardTopGreen: Record<UnoWildCardProps["value"], string> = {
+  "+4": "",
+  wild: "M56 56L41 81C57.7822 81 72.1256 70.6527 78.0625 56H56Z",
+};
+
+export const UnoWildCardTopYellow: Record<UnoWildCardProps["value"], string> = {
+  "+4": "",
+  wild: "M33.9375 56C32.0593 60.6355 31 65.6908 31 71C31 76.5229 35.4772 81 41 81L56 56H33.9375Z",
+};
+
+export const UnoWildCardBottomRed: Record<UnoWildCardProps["value"], string> = {
+  "+4": "",
+  wild: "M201 281C184.218 281 169.874 291.347 163.938 306H186L201 281Z",
+};
+
+export const UnoWildCardBottomBlue: Record<UnoWildCardProps["value"], string> =
+  {
+    "+4": "",
+    wild: "M201 281L186 306H208.062C209.941 301.364 211 296.309 211 291C211 285.477 206.523 281 201 281Z",
+  };
+
+export const UnoWildCardBottomGreen: Record<UnoWildCardProps["value"], string> =
+  {
+    "+4": "",
+    wild: "M186 306L171 331C187.782 331 202.126 320.652 208.062 306H186Z",
+  };
+
+export const UnoWildCardBottomYellow: Record<
+  UnoWildCardProps["value"],
+  string
+> = {
+  "+4": "",
+  wild: "M163.938 306C162.059 310.635 161 315.691 161 321C161 326.523 165.477 331 171 331L186 306H163.938Z",
 };
 
 // Icon
