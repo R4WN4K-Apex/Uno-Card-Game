@@ -1,5 +1,4 @@
 import Card from "@/components/Card";
-import { UnoCard4w, UnoCardWild } from "@/components/Custom/UnoCards";
 import WildCard from "@/components/WildCard";
 
 const page = () => {
